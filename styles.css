@@ -1,0 +1,208 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fond sombre pour un style moderne */
+    color: #ddd; /* Texte gris clair pour contraster avec le fond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffd700; /* Couleur dorée pour un contraste élégant */
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.method {
+    margin-bottom: 30px;
+    text-align: left;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.method label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.method input[type="text"],
+.method input[type="number"],
+.method input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.method button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.method button:hover {
+    background-color: #e5c100;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+}
+
+.output {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#randomColorResult {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .method {
+        margin-bottom: 20px;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    #randomColorResult {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .method {
+        padding: 10px;
+    }
+
+    .method input[type="text"],
+    .method input[type="number"],
+    .method input[type="date"] {
+        padding: 8px;
+    }
+
+    .method button {
+        padding: 8px;
+    }
+
+    #randomColorResult {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Ajouté pour l'aiguille et les autres ajustements */
+#rouletteContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+#rouletteNeedle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #ffd700; /* Aiguille dorée */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#dice3DContainer {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+#cardResult img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+#randomColorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#randomColorResult {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+#randomColorHex {
+    font-size: 1.5rem;
+    color: #ffd700;
+}

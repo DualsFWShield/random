@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Decision Maker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Random Decision Maker</h1>
+        <p>Choisissez une méthode aléatoire et ajustez vos options :</p>
+
+        <!-- Roulette Graphique avec aiguille -->
+        <div class="method">
+            <label for="rouletteOptions">Entrez les options de la roulette (séparées par des virgules) :</label>
+            <input type="text" id="rouletteOptions" placeholder="Rouge, Noir, Vert">
+            <button onclick="spinRoulette()">Roulette Aléatoire</button>
+            <div id="rouletteContainer">
+                <canvas id="rouletteCanvas" width="300" height="300"></canvas>
+                <div id="rouletteNeedle"></div> <!-- Aiguille ajoutée ici -->
+            </div>
+        </div>
+
+        <!-- Dés 3D -->
+        <div class="method">
+            <label for="diceCount">Nombre de dés : </label>
+            <input type="number" id="diceCount" value="1" min="1" max="6">
+            <button onclick="rollDice3D()">Lancer de dés 3D</button>
+            <div id="dice3DContainer"></div> <!-- Conteneur pour les dés -->
+        </div>
+
+        <!-- Tirage de cartes -->
+        <div class="method">
+            <button onclick="drawCard()">Tirer une Carte</button>
+            <div id="cardResult"></div>
+        </div>
+
+        <!-- Nombre aléatoire -->
+        <div class="method">
+            <label for="randomNumberMin">Min :</label>
+            <input type="number" id="randomNumberMin" value="0">
+            <label for="randomNumberMax">Max :</label>
+            <input type="number" id="randomNumberMax" value="100">
+            <button onclick="generateRandomNumber()">Nombre Aléatoire</button>
+            <div id="randomNumberResult"></div>
+        </div>
+
+        <!-- Couleur Aléatoire -->
+        <div class="method">
+            <button onclick="generateRandomColor()">Couleur Aléatoire</button>
+            <div id="randomColorContainer">
+                <div id="randomColorResult"></div>
+                <div id="randomColorHex"></div> <!-- Affichage du code HEX -->
+            </div>
+        </div>
+
+        <!-- Pile ou Face -->
+        <div class="method">
+            <button onclick="flipCoin()">Pile ou Face</button>
+            <div id="coinResult"></div>
+        </div>
+
+        <!-- Sélection Aléatoire dans une liste -->
+        <div class="method">
+            <label for="itemList">Entrez une liste d'éléments (séparés par des virgules) :</label>
+            <input type="text" id="itemList" placeholder="élément 1, élément 2, élément 3">
+            <button onclick="pickRandomItem()">Sélection Aléatoire</button>
+            <div id="randomItemResult"></div>
+        </div>
+
+        <!-- Date/Heure aléatoire -->
+        <div class="method">
+            <label for="dateStart">Début :</label>
+            <input type="date" id="dateStart">
+            <label for="dateEnd">Fin :</label>
+            <input type="date" id="dateEnd">
+            <button onclick="generateRandomDate()">Date/Heure Aléatoire</button>
+            <div id="randomDateResult"></div>
+        </div>
+
+        <!-- Résultats centraux -->
+        <div class="output" id="output">
+            <p>Le résultat apparaîtra ici.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
